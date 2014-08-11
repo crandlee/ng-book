@@ -1,0 +1,12 @@
+extends layout
+block header
+    script(src='scripts/controllers/ngIncludeController.js')
+block content
+    div(ng-controller="ngIncludeController")
+        select(ng-model="selection" ng-options="item for item in items")
+        div(ng-switch on="selection")
+            div(ng-switch-when="Selection 1")
+                div(ng-include='\'partials/testTemplate.html\'')
+            div(ng-switch-when="Selection 2")
+                div(ng-include='\'partials/testTemplate2.html\'')
+

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+
+    div(ng-controller="MyController")
+        input(ng-model="person.name" type="text" placeholder="your name")
+        h1 Hello {{ person.name }}
+
+    div(ng-controller="MyController")
+        h5 {{ clock }}

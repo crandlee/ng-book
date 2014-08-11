@@ -1,0 +1,13 @@
+extends layout
+block header
+    script(src='scripts/directives/firstDirective.js')
+
+block content
+    h1 This is some stuff
+    label Their Url Field:
+    input(type='text'
+        data-ng-model='theirUrl')
+    first-directive(
+        some-attr='theirUrl'
+        data-my-link-text='This is working')
+
